@@ -1,10 +1,12 @@
 sum_input = int(input('Please, insert a number: '))
 
 def sum_n(n):
-    for x in range(sum_input):
-        sum = x + 1
-        print(sum)
-    return sum
+    result = 0
+    for number in range(n):
+        result = result + (number) + 1
+    print(result)
 
+    return result
 sum_n(sum_input)
+
 
