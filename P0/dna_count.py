@@ -1,5 +1,4 @@
 DNA_input = input('Please introduce a DNA sequence:')
-DNA_input = upper.DNA_input
 
 print('Total length:', len(DNA_input))
 
@@ -10,13 +9,13 @@ T_counter = 0
 
 for x in DNA_input:
     if x == 'A':
-        A_counter =+1
-    if x == 'G':
-        G_counter = +1
-    if x == 'C':
-        C_counter = +1
-    if x == 'T':
-        T_counter = +1
+        A_counter += 1
+    elif x == 'G':
+        G_counter += 1
+    elif x == 'C':
+        C_counter += 1
+    else:
+        T_counter += 1
 
 print('A:', A_counter)
 print('G:', G_counter)
