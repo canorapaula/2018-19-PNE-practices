@@ -49,7 +49,7 @@ else:
 
 seq_list = [s1, s2]
 
-for i+1, elem in enumerate(seq_list)
+# for i+1, elem in enumerate(seq_list)
 
 print("This sequences is: ", tl, 'bases length.')
 print('Base A')
@@ -67,10 +67,5 @@ print("\tPercentage: ", perc_g)
 print('Base C')
 print("\tCounter: {}".format(d['Cs']))
 print("\tPercentage: ", perc_c)
-
-
-
-
-
 
 # for i(index) + 1,elem(element) in enumerate(list)
