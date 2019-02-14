@@ -1,8 +1,10 @@
+# Practice 2. Server for the main program
+
 import socket
 
 # Configure the Server's IP and PORT
 PORT = 8089
-IP = "212.128.253.65"
+IP = "212.128.253.114"
 MAX_OPEN_REQUESTS = 5
 
 # Counting the number of connections
@@ -32,7 +34,7 @@ try:
         print("Message from client: {}".format(msg))
 
         # Send the messag
-        message = "Message from my computer to Paula's"
+        message = "THIS IS THE SERVER"
         send_bytes = str.encode(message)
         # We must write bytes, not a string
         clientsocket.send(send_bytes)
