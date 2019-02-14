@@ -1,0 +1,47 @@
+Here you take your notes
+
+Client-Server Model
+
+Client à They start the communication by sending a request to the Server. The server sends a response to the Client.
+Depending on the request sent by the client the server will send a response adequate to that request.
+
+If there are no clients, the server just waits, if there is no server the request won’t be completed.
+FIRST EXECUTE THE SERVER!!!
+
+These programs are running on a computer (mobile, tablet…any device with a microprocessor that is able to read codes is
+called a computer.)
+
+One computer can have both the server and the client, they don’t necessarily need to be on different computers.
+
+Computers are grouped in networks, with the IP address (something all computers have if they are connected to internet.
+Also called Network interface.) The IP can change depending on the computer where you are connected.
+
+*My phone IP address today at URJC is:
+
+    10.0.48.186
+
+*Teacher’s IP:
+
+    212.128.253.64
+
+In terminal, if you write the command ifconfig it’ll give you your IP right after the word inet.
+
+*My computer’s IP:
+
+    212.128.253.72
+
+With the command ping we make sure the machine is working. The time it tells is the time it takes the signal to arrive.
+
+*Ping time to 8.8.8.8    time=3.56ms
+* Ping time to my computer   time=0.061ms (61 us)(us=microseconds)
+* Ping time to my classmate’s computer   time=0.344ms (344 us)
+
+Depending on the time, it is possible to know if the computer is near or far.
+* Ping time to my mobile phone   time=5.01ms
+
+Since an IP is a really difficult thing to remember we identify by URLàidentifying a computer’s interface for humans!!!
+* Ping time to www.google.com     216.58.211.228
+*Ping to www.urjc.es     212.128.240.50
+
+You also need a PORT to connect to a server.
+THIS IS A TEXT EXAMPLE FOR ADDING TO MY FILE!!!
