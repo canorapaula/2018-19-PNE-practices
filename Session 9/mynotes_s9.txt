@@ -1,1 +1,8 @@
 Sockets appear when a client connects to a server and sends/receives info.
+
+Echo server --> Repeats what it has received. It is used for testing a software. Kinda like a ping command
+
+INSTALLINNG LIBRARIES:
+
+    We install the in our local account.
+    In folder venv there are tools for installing in the account.
