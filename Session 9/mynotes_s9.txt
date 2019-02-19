@@ -1,0 +1,1 @@
+Sockets appear when a client connects to a server and sends/receives info.
