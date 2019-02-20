@@ -13,15 +13,16 @@ class Seq:
 
     def comp(self):
         for x in self.strbases:
+            complement  =''
             if x == 'A':
-                print('T')
+                complement += 'T'
             if x == 'T':
-                print('A')
+                complement += 'A'
             if x == 'G':
-                print('C')
+                complement += 'C'
             if x == 'C':
-                print('G')
-        return comp
+                complement += 'G'
+        return complement
 
     def reverse(self):
 
@@ -58,9 +59,9 @@ class Seq:
 
         if len(self) > 0:
             perc_a = round(100.0 * count(self)['As'] / len(self), 1)
-            # perc_t = round(100.0 * d1['Ts'] / tl1, 1)
-            # perc_g = round(100.0 * d1['Gs'] / tl1, 1)
-            # perc_c = round(100.0 * d1['Cs'] / tl1, 1)
+            perc_t = round(100.0 * count(self)['Ts'] / len(self), 1)
+            perc_g = round(100.0 * count(self)['Gs'] / len(self), 1)
+            perc_c = round(100.0 * count(self)['Cs'] / len(self), 1)
 
         else:
             perc_a = 0
@@ -70,7 +71,7 @@ class Seq:
         dict_perc = {'As': perc_a, 'Ts': perc_t, 'Gs': perc_g, 'Cs': perc_c}
         return dict_perc
 
-s1 = Seq('AAATTTGGGCCC')
+s1 = input('Please, enter Sequence 1:')
 str1 = s1.strbases
 print('Sequence 1: ', str1)
 
