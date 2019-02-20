@@ -8,14 +8,13 @@ IP = "212.128.253.66"
 MAX_OPEN_REQUEST = 5
 
 # Function defined to create an echo server:
-
-
 def process_client(cs):
 
     # Reading the message from the client
     msg = cs.recv(2048).decode("utf-8")
 
     print("Message from the client: {}".format(msg))
+
 
     # Sending the message back to the client(since we are an echo server
     cs.send(str.encode(msg))
