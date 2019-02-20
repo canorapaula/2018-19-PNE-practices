@@ -1,22 +1,24 @@
+# Counting bases.
+
 def count_bases(seq):
     """Counting the number of As in the seq."""
 
-    # Counter fo the As:
+    # Counter of the As:
     result_a = 0
     for b in seq:
         if b == 'A':
             result_a += 1
-    # Counter fo the Ts:
+    # Counter of the Ts:
     result_t = 0
     for b in seq:
         if b == 'T':
             result_t += 1
-    # Counter fo the Gs:
+    # Counter of the Gs:
     result_g = 0
     for b in seq:
         if b == 'G':
             result_g += 1
-    # Counter fo the Cs:
+    # Counter of the Cs:
     result_c = 0
     for b in seq:
         if b == 'C':
