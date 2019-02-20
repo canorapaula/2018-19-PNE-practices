@@ -5,27 +5,47 @@
 import socket
 
 PORT = 8089
-IP = "212.128.253.66"
+IP = "212.128.253.65"
 # Max number of clients sending a request
 MAX_OPEN_REQUEST = 5
 
 
 def length(s):
     return len(s)
+
+
 def percentage(s):
     tl = len(s)
+    print(tl)
     return
+
+
+def count(s):
+    countA = 0
+    countT = 0
+    countG = 0
+    countC = 0
+    for x in s:
+        if x == 'A':
+            countA += 1
+        if x == 'T':
+            countT += 1
+        if x == 'G':
+            countG += 1
+        if x == 'C':
+            countC += 1
+    return countA, countT, countG, countC
+
+
 # Function defined to create an echo server:
-
-
 def process_client(cs):
 
     # Reading the message from the client
     msg = cs.recv(2048).decode("utf-8")
 
     print("Message from the client: {}".format(msg))
-    length_msg = print('The length is {}'.format(length(msg)))
-    cs.send(str.encode(length_msg))
+    # length_msg = print('The length is {}'.format(length(msg))) I DON'T THINK I NEED THIS, SO JUST LEAVE IT JUST IN CASE YK
+    cs.send(str.encode(length))
 
     # Sending the message back to the client(since we are an echo server
     cs.send(str.encode(msg))
