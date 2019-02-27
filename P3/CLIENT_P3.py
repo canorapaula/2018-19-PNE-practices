@@ -9,13 +9,11 @@ s.connect((IP, PORT))
 
 
 while True:
-    # The client is blocking the server....  NOT A GOOD DESIGN!!!
     msg = """ATGC
     len
     countA
     percA"""
 
-# Send the request message to the server
     s.send(str.encode(msg))
 
     # Receive the servers respoinse
