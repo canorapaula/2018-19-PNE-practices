@@ -1,11 +1,11 @@
-# In google:  IP:8080/blue --> you see the blue.html page
+# Open different Servers (Main Page, blue, pink or Error).
 
 import socket
 import termcolor
 
 # Change this IP to yours!!!!!
 IP = "212.128.253.66"
-PORT = 8088
+PORT = 8085
 MAX_OPEN_REQUESTS = 5
 
 
@@ -16,16 +16,22 @@ def process_client(cs):
     # Read client message. Decode it as a string
     msg = cs.recv(2048).decode("utf-8")
 
-    # Print the received message, for debugging
+    if msg.startswith("GET / ") or msg.startswith("GET /index"):
+        file = open('index.html', 'r')
+        content = file.read()
+    elif msg.startswith("GET /blue ") or msg.startswith("GET /blue.html "):
+        file = open('blue.html', 'r')
+        content = file.read()
+    elif msg.startswith("GET /pink ") or msg.startswith("GET /pink.html "):
+        file = open('pink.html', 'r')
+        content = file.read()
+    else:
+        file = open('error.html', 'r')
+        content = file.read()
+
     print()
     print("Request message: ")
     termcolor.cprint(msg, 'green')
-
-    file = open('index.html', 'r')
-    content = file.read()
-
-    file_blue = open('blue.html', 'r')
-    content = file_blue.read()
 
     status_line = "HTTP/1.1 200 ok\r\n"
 
