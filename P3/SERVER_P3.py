@@ -4,8 +4,8 @@
 
 import socket
 
-PORT = 8089
-IP = "212.128.253.65"
+PORT = 8080
+IP = "212.128.253.66"
 # Max number of clients sending a request
 MAX_OPEN_REQUEST = 5
 
@@ -43,7 +43,15 @@ def process_client(cs):
     # Reading the message from the client
     msg = cs.recv(2048).decode("utf-8")
 
-    print("Message from the client: {}".format(msg))
+    message = msg.split('\n')
+    print("Message from the client: {}".format(message))
+
+# Si esta el blank, solo tiene que returnear alive, lo demas que haya escrito el client da igual. Al igual que con una
+    # sec que da error, solo envia error y ya esta. Por lo demas la secuencia siempre va a estar en primer  lugar
+    # en la lista
+    if message[0] == '':
+        print('Alive')
+
     # length_msg = print('The length is {}'.format(length(msg))) I DON'T THINK I NEED THIS, SO JUST LEAVE IT JUST IN CASE YK
     cs.send(str.encode(length))
 
