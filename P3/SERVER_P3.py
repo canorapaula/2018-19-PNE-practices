@@ -73,3 +73,7 @@ while True:
     print("Attending client: {}".format(address))
 
     process_client(clientsocket)
+
+
+#  messagefromclient.split(\n) --> Asi lo que haces es separar el mensaje en una lista y luego el server lee el primer
+#  argumento de la liSTA Y MIRA SI ESTA BIEN LUEGO EL 2 Y SI ES LEN HACE LA LEN SI ES COMPa PUES ESO, Y ASI
