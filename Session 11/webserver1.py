@@ -5,7 +5,7 @@ import termcolor
 
 # Change this IP to yours!!!!!
 IP = "212.128.253.66"
-PORT = 8081
+PORT = 8080
 MAX_OPEN_REQUESTS = 5
 
 
