@@ -1,5 +1,6 @@
 # Open different Servers (Main Page, blue, pink or Error) with the http method.
 
+
 import http.server
 import socketserver
 
