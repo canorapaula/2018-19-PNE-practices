@@ -44,5 +44,4 @@ Handler = TestHandler
 
 with socketserver.TCPServer(("", PORT), Handler) as httpd:
     print("Serving at PORT", PORT)
-
     httpd.serve_forever()
