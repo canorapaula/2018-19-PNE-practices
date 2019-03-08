@@ -16,7 +16,7 @@ class TestHandler(http.server.BaseHTTPRequestHandler):
         print("   Cmd:   " + self.command)
         print("   Path:   " + self.path)
 
-        if request_line.startswith("GET / ") or request_line.startswith("GET /index "):
+        if request_line.startswith("GET / ") or request_line.startswith("GET /index ") or request_line.startswith("GET /index.html"):
             file = open('index_P5.html', 'r')
             content = file.read()
         elif request_line.startswith("GET /blue ") or request_line.startswith("GET /blue.html "):
