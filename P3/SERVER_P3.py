@@ -4,7 +4,7 @@
 
 import socket
 
-PORT = 8080
+PORT = 8081
 IP = "212.128.253.66"
 # Max number of clients sending a request
 MAX_OPEN_REQUEST = 5
