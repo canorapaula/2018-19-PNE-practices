@@ -1,5 +1,6 @@
 # Class Seq for Practice 1.
 
+
 class Seq:
     """A class for the different methods of the program."""
     def __init__(self, strbases):
@@ -12,8 +13,8 @@ class Seq:
         return len(self.strbases)
 
     def comp(self):
+        complement = ''
         for x in self.strbases:
-            complement  =''
             if x == 'A':
                 complement += 'T'
             if x == 'T':
@@ -26,9 +27,8 @@ class Seq:
 
     def reverse(self):
 
-        reversed = self.strbases[::-1]
-        s3 = reversed
-        return s3
+        reversed_seq = self.strbases[::-1]
+        return reversed_seq
 
     def count(self):
 
@@ -56,12 +56,11 @@ class Seq:
         return bases_dict
 
     def perc(self):
-
         if len(self) > 0:
-            perc_a = round(100.0 * count(self)['As'] / len(self), 1)
-            perc_t = round(100.0 * count(self)['Ts'] / len(self), 1)
-            perc_g = round(100.0 * count(self)['Gs'] / len(self), 1)
-            perc_c = round(100.0 * count(self)['Cs'] / len(self), 1)
+            perc_a = round(100.0 * self.count['As'] / len(self), 1)
+            perc_t = round(100.0 * self.count['Ts'] / len(self), 1)
+            perc_g = round(100.0 * self.count['Gs'] / len(self), 1)
+            perc_c = round(100.0 * self.count['Cs'] / len(self), 1)
 
         else:
             perc_a = 0
@@ -70,26 +69,3 @@ class Seq:
             perc_c = 0
         dict_perc = {'As': perc_a, 'Ts': perc_t, 'Gs': perc_g, 'Cs': perc_c}
         return dict_perc
-
-s1 = input('Please, enter Sequence 1:')
-str1 = s1.strbases
-print('Sequence 1: ', str1)
-
-l1 = s1.len()
-print('\tLength: ', l1)
-
-print('Bases Percentage: ', perc(s1))
-#d1 = count_bases(s1)
-#d2 = count_bases(s2)
-
-s2 = Seq('CGTAAC')
-str2 = s2.strbases
-print('Sequence 2: ', str2)
-
-
-print('Bases Percentage: ', perc(s2))
-
-reverse1 = s1.reverse()
-print('Sequence 4: ', reversed)
-#comp1 = s1.comp()
-#print('Sequence 3 {}'.format(comp1))
