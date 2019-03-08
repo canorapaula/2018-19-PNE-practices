@@ -3,8 +3,8 @@
 import socket
 
 # Configure the Server's IP and PORT
-PORT = 8089
-IP = "212.128.253.114"
+PORT = 8080
+IP = "212.128.253.70"
 MAX_OPEN_REQUESTS = 5
 
 # Counting the number of connections
@@ -33,10 +33,16 @@ try:
         msg = clientsocket.recv(2048).decode("utf-8")
         print("Message from client: {}".format(msg))
 
-        # Send the messag
+        reversed_seq = msg[::-1]
+        s.send(str.encode("\nThe reversed sequence is:"))
+        send_reverse = str.encode(reversed_seq)
+
+
+        # Send the message
         message = "THIS IS THE SERVER"
         send_bytes = str.encode(message)
         # We must write bytes, not a string
+        clientsocket.send(send_reverse)
         clientsocket.send(send_bytes)
         clientsocket.close()
 

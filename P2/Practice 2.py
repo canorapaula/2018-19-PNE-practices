@@ -12,7 +12,7 @@ class Seq:
         self.strbases = strbases
 
 
-IP = "212.128.253.114"
+IP = "212.128.253.70"
 PORT = 8089
 while True:
     # Create the socket
