@@ -1,6 +1,5 @@
 # Creating a server for the html files with forms, using form1.html and form2.html
 
-
 import http.server
 import socketserver
 import termcolor
