@@ -4,9 +4,22 @@ import http.server
 import socketserver
 import termcolor
 
-PORT = 8009
+PORT = 8080
 
 # Objects inherit properties from BaseHTTPRequestHandler
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+a = initial part of msg
+<body>
+    <p>Echoing the message</p>
+a+ = what you wanna add
+a+ = "<ahref="/">[MainPage]</ahref>
+</body>
+</html>
 
 
 class TestHandler(http.server.BaseHTTPRequestHandler):
@@ -16,14 +29,11 @@ class TestHandler(http.server.BaseHTTPRequestHandler):
         # -- printing the request line
         termcolor.cprint(self.requestline, 'green')
 
-        f = open("Ex1-form.html", 'r')
-        contents = f.read()
-
-        if self.requestline.startswith("GET / ") or self.requestline.startswith("GET /echo "):
-            file = open('Ex1_form.html', 'r')
+        if self.requestline.startswith("GET / ") or self.requestline.startswith("GET /echo"):
+            file = open('Ex1-form.html', 'r')
             contents = file.read()
         else:
-            file = open('Ex1-form.html', 'r')
+            file = open('Ex1-error.html', 'r')
             contents = file.read()
 
         # Generate response message with html server
