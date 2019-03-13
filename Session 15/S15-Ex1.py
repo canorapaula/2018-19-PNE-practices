@@ -7,35 +7,40 @@ import termcolor
 PORT = 8080
 
 # Objects inherit properties from BaseHTTPRequestHandler
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-a = initial part of msg
-<body>
-    <p>Echoing the message</p>
-a+ = what you wanna add
-a+ = "<ahref="/">[MainPage]</ahref>
-</body>
-</html>
-
-
 class TestHandler(http.server.BaseHTTPRequestHandler):
 
     def do_GET(self):
 
         # -- printing the request line
         termcolor.cprint(self.requestline, 'green')
-
-        if self.requestline.startswith("GET / ") or self.requestline.startswith("GET /echo"):
+        print(self.path)
+        pathlist = self.path.split('?')
+        print(pathlist)
+        resource = pathlist[0]
+        print(resource)
+        if resource == ("/"):
             file = open('Ex1-form.html', 'r')
             contents = file.read()
+        elif resource == "/echo":
+            params = pathlist[1]
+            user_message = params.split("=")
+            message = user_message[1]
+            contents = """
+            <!DOCTYPE html>
+            <html lang="en">
+            <head>     
+                <meta charset="UTF-8">     
+                <title>Echo server</title>     
+            </head>     
+            <body>     
+            <h1>Echo of the received message</h1>     
+            <p>{}<p>                                  
+            <a href="/">Home Page</a>     
+            </body>     
+            </html>""".format(message)
         else:
             file = open('Ex1-error.html', 'r')
             contents = file.read()
-
         # Generate response message with html server
         self.send_response(200)
 
@@ -48,7 +53,6 @@ class TestHandler(http.server.BaseHTTPRequestHandler):
 
 
 # -- Main Program
-# The "" with nothing in them means use the local IP adress
 with socketserver.TCPServer(("", PORT), TestHandler) as httpd:
     print("Serving at PORT: {}".format(PORT))
 
