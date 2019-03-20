@@ -1,29 +1,26 @@
-{
-  "Person_1": [
-  {"Firstname" : "Kevin"},
-  {"Lastname" : "Jonas"},
-  {"age" : 31},
-  {"phoneNumber": [
-    {"number": "1111-1111", "type": "home"},
-    {"number": "2222-2222", "type": "mobile"}
-  ]}
-  ],
-  "Person_2": [
-  {"Firstname" : "Joe"},
-  {"Lastname" : "Jonas"},
-  {"age" : 29},
-  {"phoneNumber": [
-    {"number": "3333-3333", "type": "home"},
-    {"number": "4444-4444", "type": "mobile"}
-  ]}
-  ],
-  "Person_3": [
-  {"Firstname" : "Nick"},
-  {"Lastname" : "Jonas"},
-  {"age" : 26},
-  {"phoneNumber": [
-    {"number": "1111-1111", "type": "home"},
-    {"number": "2222-2222", "type": "MOBILEEEE"}
-  ]}
-  ]
-}
+[
+  {
+    "Firstname" : "Kevin",
+    "Lastname " : "Jonas",
+    "age" : 31,
+    "phoneNumber": [
+      {"number": "1111-1111", "type": "home"},
+      {"number": "2222-2222", "type": "mobile"}
+    ]},
+  {
+    "Firstname" : "Joe",
+    "Lastname" : "Jonas",
+    "age" : 29,
+    "phoneNumber": [
+      {"number": "3333-3333", "type": "home"},
+      {"number": "4444-4444", "type": "mobile"}
+    ]},
+  {
+    "Firstname" : "Nick",
+    "Lastname" : "Jonas",
+    "age" : 26,
+    "phoneNumber": [
+      {"number": "5555-5555", "type": "home"},
+      {"number": "6666-6666", "type": "mobile"}
+    ]}
+]
