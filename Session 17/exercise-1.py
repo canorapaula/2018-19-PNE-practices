@@ -12,12 +12,12 @@ for data in person:
     print(data['Firstname'], data['Lastname'])
     termcolor.cprint("Age: ", 'green', end='')
     print(data['age'])
+    phones = data['phoneNumber']
     termcolor.cprint("Phone Numbers: ", 'green', end='')
-    print(len(person['phoneNumber']))
-    for i, num in enumerate(person['phoneNumber']):
+    print(len(phones))
+    for i, num in enumerate(data['phoneNumber']):
         termcolor.cprint(" Phone {}".format(i), 'blue', end='')
-        print(len(person['phoneNumber']))
-        termcolor.cprint("      \n\tType: ", 'red', end='')
+        termcolor.cprint("\n\tType: ", 'red', end='')
         print(num['type'])
         termcolor.cprint("\tNumber: ", 'red', end='')
         print(num['number'])
