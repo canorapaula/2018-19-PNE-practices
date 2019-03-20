@@ -23,7 +23,7 @@
   {"age" : 26},
   {"phoneNumber": [
     {"number": "1111-1111", "type": "home"},
-    {"number": "2222-2222", "type": "MOBILEEE"}
+    {"number": "2222-2222", "type": "MOBILEEEE"}
   ]}
   ]
 }
