@@ -7,6 +7,8 @@ import termcolor
 PORT = 8080
 
 # Objects inherit properties from BaseHTTPRequestHandler
+
+
 class TestHandler(http.server.BaseHTTPRequestHandler):
 
     def do_GET(self):
@@ -18,7 +20,7 @@ class TestHandler(http.server.BaseHTTPRequestHandler):
         print(pathlist)
         resource = pathlist[0]
         print(resource)
-        if resource == ("/"):
+        if resource == "/":
             file = open('Ex1-form.html', 'r')
             contents = file.read()
         elif resource == "/echo":
