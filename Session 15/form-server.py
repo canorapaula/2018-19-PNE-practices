@@ -4,7 +4,7 @@ import http.server
 import socketserver
 import termcolor
 
-PORT = 8001
+PORT = 8000
 
 # Objects inherit properties from BaseHTTPRequestHandler
 
@@ -28,6 +28,15 @@ class TestHandler(http.server.BaseHTTPRequestHandler):
 
         # -- Sending the body response message
         self.wfile.write(str.encode(contents))
+
+        print()
+        termcolor.cprint('Text received', 'cyan')
+        mes_dict = self.requestline.split('msg=')
+        mes_dict_1 = mes_dict[1].split('&')
+        mes_dict_2 = mes_dict_1[0].split('+')
+        print(mes_dict_2[0])
+
+        termcolor.cprint('Text received FINISHED', 'cyan')
 
 
 # -- Main Program
