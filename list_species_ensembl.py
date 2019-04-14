@@ -1,6 +1,5 @@
 import http.client
 import json
-import termcolor
 
 HOSTNAME = "rest.ensembl.org"
 ENDPOINT = "/info/"
