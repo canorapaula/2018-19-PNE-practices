@@ -1,5 +1,6 @@
 import http.client
 import json
+import termcolor
 
 HOSTNAME = "rest.ensembl.org"
 ENDPOINT = "/info/"
@@ -18,4 +19,4 @@ user = json.loads(text_json)
 
 for x in user['species']:
     print('\t\t', end='')
-    print(x['name'])
+    termcolor.cprint(x['name'], 'grey')
