@@ -18,11 +18,15 @@ conn.close()
 user = json.loads(text_json)
 
 for x in user['species']:
-    print('\t\t', end='')
-    termcolor.cprint(x['name'], 'grey')
+    # print('\t\t', end='')
+    # termcolor.cprint(x['name'], 'grey')
+    carrot = 'whaevs'
 
 def listspecies1():
     listspecies = ''
     for x in user['species']:
-        listspecies = listspecies + x['name']
+        listspecies = listspecies + ',' +  x['name']
+
     return listspecies
+
+listspecies1()
