@@ -1,5 +1,4 @@
 # Write texts in different colours
-
 import termcolor
 
 termcolor.cprint("Hey! This is printed in green!", 'green')
