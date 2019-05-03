@@ -1,3 +1,5 @@
+# Client for Practice 7
+
 import http.client
 import http.server
 import json
