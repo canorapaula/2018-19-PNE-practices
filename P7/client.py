@@ -19,6 +19,7 @@ user = json.loads(text_json)
 
 sequence = user['seq']
 len_sequence = len(sequence)
+
 termcolor.cprint('The number of bases of the sequence is: {}'.format(len_sequence), 'green')
 
 A_number = 0
