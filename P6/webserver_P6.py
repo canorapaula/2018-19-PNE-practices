@@ -54,7 +54,6 @@ class TestHandler(http.server.BaseHTTPRequestHandler):
                         length_sequence = len(msg)
                         contents = contents.replace('Length off', 'Length: {}'.format(length_sequence))
                     elif oper == 'count':
-                        contents = contents.replace('OPERR', 'Count:')
                         A_number = 0
                         C_number = 0
                         T_number = 0
@@ -69,7 +68,7 @@ class TestHandler(http.server.BaseHTTPRequestHandler):
                             elif x == 'G':
                                 G_number += 1
                         if base == 'A':
-                            print(A_number)
+                            contents = contents.replace('OPERR', 'Count of A: {}'.format(A_number))
                         elif base == 'C':
                             print(C_number)
                         elif base == 'T':
