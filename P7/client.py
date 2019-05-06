@@ -22,7 +22,7 @@ user = json.loads(text_json)
 sequence = user['seq']
 len_sequence = len(sequence)
 
-termcolor.cprint('The number of bases of the sequence is: {}'.format(len_sequence), 'green')
+termcolor.cprint('The number of bases of the sequence is: {}'.format(len_sequence), 'grey')
 
 A_number = 0
 C_number = 0
@@ -38,7 +38,7 @@ for x in sequence:
     elif x == 'G':
         G_number += 1
 
-termcolor.cprint('The number of T bases of the sequence is: {}'.format(T_number), 'green')
+termcolor.cprint('The number of T bases of the sequence is: {}'.format(T_number), 'grey')
 
 percentages = ''
 if len_sequence > 0:
@@ -57,7 +57,7 @@ else:
     per_G = 0
     per_T = 0
 
-termcolor.cprint('The percentage of A bases of the sequence is: {}%'.format(per_A), 'green')
-termcolor.cprint('The percentage of C bases of the sequence is: {}%'.format(per_C), 'green')
-termcolor.cprint('The percentage of T bases of the sequence is: {}%'.format(per_T), 'green')
-termcolor.cprint('The percentage of G bases of the sequence is: {}%'.format(per_G), 'green')
+termcolor.cprint('The percentage of A bases of the sequence is: {}%'.format(per_A), 'grey')
+termcolor.cprint('The percentage of C bases of the sequence is: {}%'.format(per_C), 'grey')
+termcolor.cprint('The percentage of T bases of the sequence is: {}%'.format(per_T), 'grey')
+termcolor.cprint('The percentage of G bases of the sequence is: {}%'.format(per_G), 'grey')
