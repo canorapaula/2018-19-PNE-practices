@@ -1,6 +1,5 @@
 # Class Seq for Practice 1.
 
-
 class Seq:
     """A class for the different methods of the program."""
     def __init__(self, strbases):
