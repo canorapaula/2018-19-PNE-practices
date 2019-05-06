@@ -2,7 +2,6 @@
 
 import socket
 
-
 class Seq:
 
     """A class for representing sequences."""
