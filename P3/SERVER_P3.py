@@ -3,7 +3,7 @@
 
 import socket
 
-PORT = 8081
+PORT = 8083
 IP = "212.128.253.66"
 # Max number of clients sending a request
 MAX_OPEN_REQUEST = 5
@@ -20,21 +20,20 @@ def percentage(s):
 
 
 def count(s):
-    countA = 0
-    countT = 0
-    countG = 0
-    countC = 0
+    A_number = 0
+    C_number = 0
+    T_number = 0
+    G_number = 0
     for x in s:
         if x == 'A':
-            countA += 1
-        if x == 'T':
-            countT += 1
-        if x == 'G':
-            countG += 1
-        if x == 'C':
-            countC += 1
-    return countA, countT, countG, countC
-
+            A_number += 1
+        elif x == 'C':
+            C_number += 1
+        elif x == 'T':
+            T_number += 1
+        elif x == 'G':
+            G_number += 1
+    return A_number, T_number, G_number, C_number
 
 # Function defined to create an echo server:
 def process_client(cs):
