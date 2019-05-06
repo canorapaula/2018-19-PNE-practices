@@ -2,7 +2,7 @@ import http.server
 import socketserver
 import termcolor
 
-PORT = 8000
+PORT = 8081
 
 
 class TestHandler(http.server.BaseHTTPRequestHandler):
