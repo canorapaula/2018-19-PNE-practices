@@ -39,7 +39,6 @@ def process_client(cs):
     header += "Content-Length: {}\r\n".format(len(str.encode(content)))
 
     response_msg = status_line + header + "\r\n" + content
-
     cs.send(str.encode(response_msg))
 
     # Close the socket
