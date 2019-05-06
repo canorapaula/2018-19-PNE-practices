@@ -22,3 +22,4 @@ print('A:', A_counter)
 print('G:', G_counter)
 print('C:', C_counter)
 print('T:', T_counter)
+
