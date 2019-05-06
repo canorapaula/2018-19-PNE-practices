@@ -1,12 +1,13 @@
 # Main program for Practice 1
-
+# In this program the output will be printed:
 
 from P1.Seq import Seq
 
 s1 = input('Please, enter Sequence 1: ')
 # str1 = s1.strbases
 print('Sequence 1: ', s1)
-l1 = s1.len()
+s1 = str(s1)
+l1 = s1.length(s1)
 print('\tLength: ', l1)
 b1 = s1.count()
 print('\tBases count: {}'.format(b1))

@@ -8,7 +8,7 @@ class Seq:
         print('New sequence created.')
         self.strbases = strbases
 
-    def len(self):
+    def length(self):
 
         return len(self.strbases)
 
