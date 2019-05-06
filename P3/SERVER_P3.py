@@ -1,7 +1,6 @@
 # Server for the 3rd practice. It performs operations on a sequence: total length, finding the number of a base and
 # the percentage of a base in the sequence
 
-
 import socket
 
 PORT = 8081
@@ -59,7 +58,6 @@ def process_client(cs):
     cs.send(str.encode(msg))
 
     cs.close()
-
 
 # Create a socket for connecting to the clients. The parameters are always the same.
 serversocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)

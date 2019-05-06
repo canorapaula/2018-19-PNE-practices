@@ -1,3 +1,5 @@
+# The lient for sending the message to the server:
+
 import socket
 
 # SERVER IP, PORT
