@@ -1,6 +1,5 @@
 # Open different Servers (Main Page, blue, pink or Error) with the http method.
 
-
 import http.server
 import socketserver
 
@@ -38,7 +37,6 @@ class TestHandler(http.server.BaseHTTPRequestHandler):
         self.wfile.write(str.encode(content))
 
         return
-
 
 Handler = TestHandler
 
